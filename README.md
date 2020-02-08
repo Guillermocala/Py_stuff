@@ -1,2 +1,2 @@
-# Py_stuff
-/*FREE SPACE OF PYTHON*/
+# Py_stuff n.n
+*FREE SPACE OF PYTHON*
