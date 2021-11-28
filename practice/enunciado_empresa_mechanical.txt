@@ -1,0 +1,21 @@
+La empresa Mechanical Enterprises se encarga de realizar obras a lo largo del territorio nacional, por lo que requiere de una planeación de sus proyectos y recursos, de tal forma que estos se realicen de una manera ordenada y finalicen de manera satisfactoria para todos los clientes. 
+Puntualmente, la empresa tiene una necesidad de llevar su control de inventario de consumibles de manera ordenada y práctica, con el fin de llevar una gestión de costos correctas y no incurra en sobrecostos.
+Para esto, es necesario que los usuarios puedan gestionar los siguientes datos de un producto:
+•	Código de producto
+o	El código de producto debe ser único, no puede haber códigos de productos repetidos.
+o	El código del producto debe tener al menos un caractér
+•	Nombre de producto
+o	El nombre del producto debe tener al menos un carácter.
+•	Cantidad de inventario
+o	La cantidad de inventario debe ser mayor o igual a cero.
+•	Costo Unitario
+o	El costo unitario debe ser mayor o igual a cero.
+
+Basado en esto, los usuarios pueden hacer las siguientes actividades, las cuales deben ser mostradas en un menú (0.2):
+•	Crear un producto: Agregar su código, nombre y costo unitario. La cantidad inicial de inventario es igual a cero. (0.8)
+•	Modificar un producto: Se debe ingresar su código y si existe, se puede modificar su nombre y costo unitario. Si no existe el código ingresado, se le debe informar al usuario. (0.8)
+•	Mostrar los datos de un producto: Se debe ingresar su código, y el programa debe mostrar su código, nombre, cantidad de inventario, costo unitario y el costo total del inventario (cantidad de inventario x costo unitario). Si no existe el código ingresado, se le debe informar al usuario. (0.8)
+•	Mostrar los datos de todos los productos: Se debe mostrar su código, nombre, cantidad de inventario, costo unitario y el costo total del inventario (cantidad de inventario x costo unitario) de cada producto que existe. (0.8)
+•	Agregar cantidad de inventario: Se debe ingresar el código de un producto y mostrar un mensaje si existe o no. Si existe, se puede agregar cantidades positivas de inventario al producto seleccionado y estas deben ser sumadas al inventario del producto. (0.8)
+•	Sacar cantidad de inventario de un producto: Se debe ingresar el código de un producto y mostrar un mensaje si existe o no. Si existe, se puede agregar cantidades positivas de inventario al producto seleccionado y están deben ser restadas al inventario del producto. (0.8)
+•	Salir: Cierra la aplicación. 
