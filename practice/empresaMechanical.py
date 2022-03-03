@@ -29,7 +29,6 @@ def crear(lista):
         if re.search('[a-z]', codigo.lower()) == None:
             print("código inválido, debe tener al menos una letra")
             temp = True
-        
     nombre = input("ingrese el nombre: ")
     cantidad = 0
     costoUnitario = int(input("ingrese el costo unitario: "))
