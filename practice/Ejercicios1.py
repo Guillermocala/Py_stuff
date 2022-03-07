@@ -62,3 +62,43 @@ print(lista)
 print("La sumatoria es: ", suma(lista))
 print("La producto es: ", multiplicacion(lista))
 """
+
+"""     Ejercicio 6- inversa()
+def inversa(cadena):
+    respuesta = ""
+    length = len(cadena)
+    for item in range(length):
+        respuesta += cadena[length - 1]
+        length -= 1
+    return respuesta
+
+palabra = input("ingresa una palabra: ")
+print("La inversa es: ", inversa(palabra))
+"""
+
+"""     Ejercicio 7- es_palindromo()
+def inversa(cadena):
+    respuesta = ""
+    length = len(cadena)
+    for item in range(length):
+        respuesta += cadena[length - 1]
+        length -= 1
+    return respuesta
+
+def es_palindromo(palabra):
+    palabra_invertida = inversa(palabra)
+    if palabra == palabra_invertida:
+        return True
+    else:
+        return False
+
+palabra = input("Ingresa una palabra: ")
+if es_palindromo(palabra):
+    print("La palabra es palindroma")
+else:
+    print("La palabra no es palindroma")
+"""
+
+"""     Ejercicio 8- superposicion()"""
+def superposicion(lista1, lista2):
+    
