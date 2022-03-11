@@ -99,6 +99,33 @@ else:
     print("La palabra no es palindroma")
 """
 
-"""     Ejercicio 8- superposicion()"""
+"""     Ejercicio 8- superposicion()
 def superposicion(lista1, lista2):
-    
+    for item in lista1:
+        if item in lista2:
+            return True
+    else:
+        return False
+
+lista1 = [1, 2, 3, 4, 5]
+lista2 = [6, 7, 8]
+print(superposicion(lista2, lista1))
+"""
+
+"""     Ejercicio 9- generar_n_caracteres()
+def generar_n_caracteres(num, caracter):
+    return (caracter * num)
+
+caracter = input("ingresa un caracter: ")
+veces = int(input("ingresa un numero: "))
+print(generar_n_caracteres(caracter, veces))
+"""
+
+"""     Ejercicio 10- histograma()
+def histograma(lista):
+    for item in lista:
+        print("*" * item)
+
+lista = [1, 5, 3, 2, 6]
+histograma(lista)
+"""
