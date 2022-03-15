@@ -116,7 +116,6 @@ print("Hay ", filtro_nombres(lista, caracter), " nombres con dicho caracter")
 
 """     Ejercicio 9: contar_vocales()
 def contar_vocales(palabra):
-    "lista = [a, e, i, o, u]"
     dic_contadores = {"a":0, "e":0, "i":0, "o":0, "u":0}
     for item in palabra:
         match item.lower():
