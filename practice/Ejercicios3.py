@@ -1,8 +1,8 @@
-"""     Ejercicio 1: reino del dragon"""
+'''     Ejercicio 1: reino del dragon
 import random, time
 
 def introduccion():
-    print("""       REINO DEL DRAGON
+    print("""               REINO DEL DRAGON
     Estamos en una tierra llena de dragones. Delante nuestro,
     se ven dos cuevas. En una cueva, el dragon es amigable
     y compartira el tesoro contigo. El otro dragon
@@ -10,9 +10,9 @@ def introduccion():
     """)
 
 def cambiar_cueva():
-    cueva = ""
-    while cueva != "1" and cueva != "2":
-        cueva = input("A que cueva quieres entrar? 1 o 2?: ")
+    cueva = 0
+    while cueva != 1 and cueva != 2:
+        cueva = int(input("A que cueva quieres entrar? 1 o 2?: "))
     return cueva
 
 def chequea_cueva(cueva):
@@ -23,8 +23,8 @@ def chequea_cueva(cueva):
     print("Un gran dragon salta delante tuyo, abre su boca y...")
     time.sleep(2)
     suerte = random.randint(1, 2)
-    if cueva == 1:
-        print("Te engrega el tesoro...")
+    if cueva == suerte:
+        print("Te engrega el tesoro...(+100pts)")
         return 100
     else:
         print("El dragon te come de un bocado...")
@@ -55,3 +55,38 @@ while activador == "si":
 
     if not(verificador(puntos)):
         break
+
+'''
+
+"""     Ejercicio 2: MASTER MIND"""
+import random
+def ingresa_numero():
+    len_cadena = 0
+    while not(len_cadena in range(2, 9)):
+        len_cadena = int(input("Ingrese la longitud del numero(2 a 9): "))
+    
+    num_random = str(random.randint(0, 999999999))
+    resultado = int(num_random[:len_cadena])
+    return resultado
+
+def verificador(num_pendiente):
+    num_ingresado = int(input("Intenta adivinar el numero: "))    
+    while len(str(num_ingresado)) != len(str(num_pendiente)):
+        print("Ha ingresado un numero de diferente tamanio")
+        num_ingresado = int(input("Intenta adivinar el numero: "))
+    return num_ingresado
+
+def master_mind(num_ingresado, num_pendiente):
+    lista_num_ingr = [int(x) for x in str(num_ingresado)]
+    lista_num_pend = [int(x) for x in str(num_pendiente)]
+    cantidad = 0
+    for x in range(len(lista_num_ingr)):
+        if lista_num_ingr[x] == lista_num_pend[x]:
+            cantidad += 1
+    return cantidad
+
+num_generado = ingresa_numero()
+print("numero generado: ", num_generado)
+num_ingresado = verificador(num_generado)
+print("Con", num_ingresado, " has adivinado: ", master_mind(num_ingresado, num_generado))
+
