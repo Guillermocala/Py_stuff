@@ -58,7 +58,7 @@ while activador == "si":
 
 '''
 
-"""     Ejercicio 2: MASTER MIND"""
+"""     Ejercicio 2: MASTER MIND
 import random
 def ingresa_numero():
     len_cadena = 0
@@ -86,7 +86,18 @@ def master_mind(num_ingresado, num_pendiente):
     return cantidad
 
 num_generado = ingresa_numero()
-print("numero generado: ", num_generado)
+activador = True
 num_ingresado = verificador(num_generado)
-print("Con", num_ingresado, " has adivinado: ", master_mind(num_ingresado, num_generado))
+cantidad = master_mind(num_ingresado, num_generado)
+while activador:
+    if len(str(num_ingresado)) != cantidad:
+        print("Con", num_ingresado, " has adivinado: ", cantidad)
+        num_ingresado = verificador(num_generado)
+        cantidad = master_mind(num_ingresado, num_generado)
+    else:
+        print("Con", num_ingresado, " has adivinado: ", cantidad)
+        print("Felicidades, has ganado!")
+        activador = False
+"""
 
+"""     Ejercicio 3: Palabras que riman"""
