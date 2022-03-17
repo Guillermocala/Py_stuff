@@ -100,4 +100,18 @@ while activador:
         activador = False
 """
 
-"""     Ejercicio 3: Palabras que riman"""
+"""     Ejercicio 3: Palabras que riman
+def palabras_riman(palabra1, palabra2):
+    if palabra1[len(palabra1) - 3:] == palabra2[len(palabra2) - 3:]:
+        print("Las palabras riman")
+    elif palabra1[len(palabra1) - 2:] == palabra2[len(palabra2) - 2:]:
+        print("Las palabras riman un poco")
+    else:
+        print("Las palabras no riman")
+
+palabra1 = input("Ingresa la primera palabra: ")
+palabra2 = input("Ingresa la segunda palabra: ")
+palabras_riman(palabra1, palabra2)
+"""
+
+"""     Ejercicio 4: convertidor"""
