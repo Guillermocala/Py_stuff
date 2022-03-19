@@ -114,4 +114,10 @@ palabra2 = input("Ingresa la segunda palabra: ")
 palabras_riman(palabra1, palabra2)
 """
 
-"""     Ejercicio 4: convertidor"""
+"""     Ejercicio 4: convertidor
+def interes_anual(cantidad, tasa, num_anio):
+    resultado = cantidad * (1 + tasa/100)**num_anio
+    return resultado
+
+print("ejemplo: ", interes_anual(10000, 4.5, 20))
+"""
