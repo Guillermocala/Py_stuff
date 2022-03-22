@@ -52,7 +52,7 @@ print(elimina_item(lista, eliminado))
 print(lista)
 """
 
-"""     Ejercicio 5: diferencia listas"""
+"""     Ejercicio 5: diferencia listas
 def diferencia_listas(lista1, lista2):
     lista_temp = lista1.copy()
     for item in lista1:
@@ -64,3 +64,49 @@ numero = int(input("2 - Ingresa el numero de datos: "))
 lista2 = crear_lista(numero)
 listar = diferencia_listas(lista, lista2)
 print(listar)
+"""
+
+"""     Ejercicio 6: reverse lista
+def voltear_lista(lista):
+    listar = lista.copy()
+    listar.reverse()
+    '''otro metodo:
+        listar = lista[::-1]
+        hace la copia y directamente la pone al reves'''
+    return listar
+
+print("lista reverse: ", voltear_lista(lista))
+"""
+
+"""     Ejercicio 7: elimina ocurrencias(excepto la primera)"""
+#sacamos el indice de la primera ocurrencia, eliminamos todos y al final
+#insertamos el dato en donde estaba su primera ocurrencia
+def elimina_ocurrencias(lista, dato):
+    if lista.count(dato) != 0:
+        position = lista.index(dato)
+        for item in lista:
+            if item == dato:
+                lista.remove(item)
+        lista.insert(position, dato)
+    else:
+        return "dato no encontrado"
+    return lista
+    
+eliminar = input("Ingresa el dato a eliminar: ")
+print(elimina_ocurrencias(lista, eliminar))
+
+
+"""     Ejercicio 8: operaciones listas
+def elimina_ocurrencias(lista, dato):
+    if lista.count(dato) != 0:
+        position = lista.index(dato)
+        for item in lista:
+            if item == dato:
+                lista.remove(item)
+        lista.insert(position, dato)
+
+print("lista normal: ", lista)
+for item in lista:
+    elimina_ocurrencias(lista, item)
+print("lista sin repetidos: ", lista)
+"""
