@@ -1,0 +1,9 @@
+1 - Escriba un programa que permita crear una lista de palabras y que, a continuación, ordene la lista por orden alfabético.
+
+2 - Escriba un programa que pida un número y a continuación escriba la lista de todos los divisores del número (incluidos el uno y él mismo).
+
+3 - Escriba un programa que pida un número y a continuación escriba la lista de todos los números primos hasta él.
+
+4 - Escriba un programa que calcule términos de una sucesión del tipo Un+1 = a Un + b. El programa tiene que pedir el valor de a, de b y del término U0 y el número de términos a calcular.
+
+5 - Escriba un programa que calcule términos de la sucesión Un+1 = 3 Un + 1 si Un es impar y U n+1 = Un / 2 si Un es par. El programa tiene que pedir el término U0 y el número de términos a calcular.
