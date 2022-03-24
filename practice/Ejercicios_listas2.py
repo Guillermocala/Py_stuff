@@ -32,18 +32,32 @@ numero = int(input("Ingrese el numero: "))
 print(f"{numero} tiene los sgtes divisores: ", divisores(numero))
 """
 
-"""     Ejercicio 3: num primos"""
+"""     Ejercicio 3: num primos
 def primos(numero):
     lista = []
     for i in range(1, numero + 1):
-        cont = 0
-        for j in range(i, numero + 1):
-            if numero % j == 0:
-                cont += 1
-                if cont == 2:
-                    lista.append(i)
-                    cont = 0
+        cant = 0
+        for j in range(1, i + 1):
+            if i % j == 0:
+                cant += 1
+        if cant == 2:
+            lista.append(i)
     return lista
 
 numero = int(input("Ingrese el numero: "))
 print(f"Primos hasta {numero} : ", primos(numero))
+"""
+
+"""     Ejercicio 4: sucesión 1"""
+def sucesion1(a, b, u, cantidad):
+    for i in range(1, cantidad + 1):
+        res = 2 ** i + 1
+        print(res)
+
+
+print("Cálculo de términos de una sucesión U(n+1)=a.U(n)+b.")
+a = int(input("Ingrese el valor de a: "))
+b = int(input("Ingrese el valor de b: "))
+u = int(input("Ingrese el valor de U(0): "))
+cant = int(input("Digame cuantos términos quiere: "))
+sucesion1(a, b, u, cant)
