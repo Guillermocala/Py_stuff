@@ -1,0 +1,43 @@
+1 - Escriba un programa que pregunte una y otra vez si desea 
+continuar con el programa, siempre que se conteste exactamente 
+sí (en minúsculas y con tilde).
+
+2 - Escriba un programa que pregunte una y otra vez si desea 
+terminar el programa, salvo si se contesta exactamente SI 
+(en mayúsculas y sin tilde).
+
+3 - Escriba un programa que pregunte una y otra vez si desea 
+terminar el programa, siempre que se conteste exactamente N 
+(en mayúsculas).
+
+4 - Escriba un programa que pregunte una y otra vez si desea 
+continuar el programa, salvo si se contesta exactamente no 
+(en minúsculas).
+
+5 - Escriba un programa que pregunte una y otra vez si desea 
+continuar con el programa, siempre que se conteste S o s 
+(en mayúsculas o en minúsculas).
+
+6 - Escriba un programa que pregunte una y otra vez si desea 
+terminar el programa, salvo si se contesta S o s (en mayúsculas
+o en minúsculas).
+
+7 - Escriba un programa que solicite una contraseña (el texto 
+de la contraseña no es importante) y la vuelva a solicitar 
+hasta que las dos contraseñas coincidan.
+
+8 - Escriba un programa que simule una hucha. El programa 
+solicitará primero una cantidad, que será la cantidad de 
+dinero que queremos ahorrar. A continuación, el programa 
+solicitará una y otra vez las cantidades que se irán ahorrando, 
+hasta que el total ahorrado iguale o supere al objetivo. 
+El programa no comprobará que las cantidades sean positivas.
+
+9 - Escriba un programa que mejore la simulación de la hucha 
+del ejercicio anterior, no permitiendo que se escriban 
+cantidades negativas.
+
+10 - Escriba un programa que solicite una contraseña (el texto 
+de la contraseña no es importante) y la vuelva a solicitar 
+hasta que las dos contraseñas coincidan, con un límite de 
+tres peticiones.
