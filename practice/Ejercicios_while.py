@@ -80,7 +80,7 @@ def confirmar_contra():
 confirmar_contra()
 """
 
-"""     Ejercicio 8: hucha(alcancía)"""
+"""     Ejercicio 8: hucha(alcancía)
 def hucha():
     print("HUCHA")
     objetivo = int(input("¿Cuántos euros quiere ahorrar?: "))
@@ -89,3 +89,43 @@ def hucha():
         temp = int(input("¿Cuántos euros quiere meter en la hucha?: "))
         acumulador += temp
     print(f"¡Objetivo conseguido! Ha ahorrado usted {acumulador} euros.")
+
+hucha()
+"""
+
+"""     Ejercicio 9: hucha mejorada
+def es_negativo(numero):
+    return (True if numero < 1 else False)
+
+def hucha_mejorada():
+    print("HUCHA MEJORADA")
+    hucha = 0
+    objetivo = int(input("¿Cuántos euros quiere ahorrar?: "))
+    while es_negativo(objetivo):
+        print("Ha ingresado un valor invalido!")
+        objetivo = int(input("¿Cuántos euros quiere ahorrar?: "))
+    while hucha < objetivo:
+        ingreso = int(input("¿Cuántos euros quiere meter en la hucha?: "))
+        while es_negativo(ingreso):
+            print("Ha ingresado un valor invalido!")
+            ingreso = int(input("¿Cuántos euros quiere meter en la hucha?: "))
+        hucha += ingreso
+    print(f"¡Objetivo conseguido! Ha ahorrado usted {hucha} euros.")
+
+hucha_mejorada()
+"""
+
+"""     Ejercicio 10: confirmar contraseña 3 intentos"""
+def confirmar_contra():
+    print("CONFIRME SU CONTRASEÑA (3 intentos)")
+    intentos = 3
+    contra = input("Escriba su contraseña: ")
+    print("Tiene 3 intentos para confirmar su contraseña")
+    contra2= input("Escriba de nuevo su contraseña: ")
+    while contra != contra2 and intentos > 1:
+        print("Las contraseñas no coinciden. Inténtelo de nuevo.")
+        contra2= input("Escriba de nuevo su contraseña: ")
+        intentos -= 1
+    print("Contraseña confirmada ¡Hasta la vista!")
+
+confirmar_contra()
