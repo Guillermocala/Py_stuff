@@ -4,10 +4,12 @@ def saludar(item):
 class Matematico:
     def __init__(self, nombre):
         self.nombre = nombre
-        self.caracteristica = 2
+        self.multiplo1 = 2
+        self.multiplo2 = 7
     
     def say_hi(self):
-        print("Hola, mi nombre es {nombre} y {multiplo}x7 es: {resultado}".format(nombre = {self.nombre}, multiplo = {self.caracteristica} * 2, resultado = 3 * 7))
+        resultado = 2 * 7
+        print(f"Hola, mi nombre es {self.nombre} y {self.multiplo1}x{self.multiplo2} es: {resultado}")
 
 class Criptografo:
     def __init__(self, nombre):
@@ -15,7 +17,7 @@ class Criptografo:
         self.caracteristica = "mapas del tesoro"
     
     def say_hi(self):
-        print("Hola, mi nombre es {nombre} y mi especialidad es: {especialidad}".format(nombre = self.nombre, especialidad = self.especialidad))
+        print("Hola, mi nombre es {nombre} y mi especialidad es: {especialidad}".format(nombre = self.nombre, especialidad = self.caracteristica))
 
 class Repartidor:
     def __init__(self, nombre):
