@@ -1,32 +1,57 @@
 import sys
-from PySide6.QtWidgets import (QLineEdit, QPushButton, QApplication,
-    QVBoxLayout, QDialog)
+from PySide6 import QtWidgets
+from PySide6.QtCore import Slot
 
-class Form(QDialog):
 
-    def __init__(self, parent=None):
-        super(Form, self).__init__(parent)
-        # Create widgets
-        self.edit = QLineEdit("Write my name here")
-        self.button = QPushButton("Show Greetings")
-        # Create layout and add widgets
-        layout = QVBoxLayout()
-        layout.addWidget(self.edit)
-        layout.addWidget(self.button)
-        # Set dialog layout
-        self.setLayout(layout)
-        # Add button signal to greetings slot
-        self.button.clicked.connect(self.greetings)
+class LabelPrincipal(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
 
-    # Greets the user
-    def greetings(self):
-        print(f"Hello {self.edit.text()}")
+        self.layout_principal = QtWidgets.QVBoxLayout(self)
+        self.pestañas = QtWidgets.QTabWidget()
+        self.layout_principal.addWidget(self.pestañas)
 
-if __name__ == '__main__':
-    # Create the Qt Application
-    app = QApplication(sys.argv)
-    # Create and show the form
-    form = Form()
-    form.show()
-    # Run the main Qt loop
+        
+        
+            
+
+        self.gb_alfabetos = QtWidgets.QGroupBox("Pantalla principal alfabetos")
+
+        self.principal_alfabetos = QtWidgets.QVBoxLayout()
+        
+        self.label1 = QtWidgets.QLabel("Ingresar alfabeto: ")
+        self.input1 = QtWidgets.QLineEdit()
+        self.check_input1 = QtWidgets.QPushButton("add")
+        self.principal_alfabetos.addWidget(self.label1)
+        self.principal_alfabetos.addWidget(self.input1)
+        self.principal_alfabetos.addWidget(self.check_input1)
+        self.gb_alfabetos.setLayout(self.principal_alfabetos)
+
+        self.pestañas.addTab(self.gb_alfabetos, "Alfabetos")
+        self.principal_alfabetos.addStretch(0)
+
+        self.componente(self.input1)
+        
+    def componente(self, input):
+        # creating a push button
+        button = input
+        # adding action to a button
+        button.connect(self.clickme())
+        # getting text in button
+        text = button.text()
+        print(text)
+
+    def clickme(self):
+        print("Button clicked, Hello!")
+            
+        
+    
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication([])
+
+    label = LabelPrincipal()
+    label.resize(500,500)
+    label.show()
+
     sys.exit(app.exec())
