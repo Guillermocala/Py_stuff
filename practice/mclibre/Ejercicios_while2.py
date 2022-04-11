@@ -132,3 +132,18 @@ pide_pares()
 """
 
 """     Ejercicio 9: descomposicion factores primos"""
+def descomposicion_factorial(numero):
+    copia = numero
+    while copia > 1:
+        for i in range(2, copia + 1):
+            if copia % i == 0:
+                print(copia, "\t", i)
+                copia //= i     #equals to copia = copia // i
+                break
+    print(copia)
+
+print("DESCOMPOSICIÓN FACTORES PRIMOS")
+numero = int(input("Escriba un numero entero mayor que 1: ")) 
+while numero < 2:
+    numero = int(input(f"{numero} no es mayor que 1. Intentelo de nuevo: "))
+descomposicion_factorial(numero)

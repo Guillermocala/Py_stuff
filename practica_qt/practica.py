@@ -1,38 +1,67 @@
 import sys
 from PySide6 import QtWidgets
 from PySide6.QtWidgets import (QApplication, QMainWindow, 
-    QPushButton, QLabel, QLineEdit, QGridLayout, QWidget
+    QPushButton, QLabel, QLineEdit, QGridLayout, QWidget,
+    QTabWidget, QVBoxLayout
     )
 
-class MainWindow(QWidget):
+class AlfabetoWidget(QWidget):
     def __init__(self):
         super().__init__()
         self.principal = QGridLayout()
-        self.label = QLabel("practica qt")
+        self.label = QLabel("Alfabetos")
+        self.principal.addWidget(self.label, 0, 0)
+        self.input = QLineEdit()
+        self.input.setPlaceholderText("Ingrese el alfabeto")
+        self.input.setClearButtonEnabled(True)
+        self.principal.addWidget(self.input, 1, 0)
+        self.button_add = QPushButton("Add")
+        self.principal.addWidget(self.button_add, 1, 1)
+        self.button_add.clicked.connect(self.texto)
+        self.button_union = QPushButton("Union")
+        self.principal.addWidget(self.button_union, 2, 0)
+        self.button_diff = QPushButton("Diferencia")
+        self.principal.addWidget(self.button_diff, 3, 0)
+        self.button_inter = QPushButton("Interseccion")
+        self.principal.addWidget(self.button_inter, 4, 0)
+
+        self.setLayout(self.principal)  
+    
+    def texto(self):
+        res = "texto ingresado: " + self.input.displayText()
+        print(res)
+
+class LenguajeWidget(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.principal = QGridLayout()
+        self.label = QLabel("Lenguajes")
         self.principal.addWidget(self.label, 0, 0, 1, 1)
         self.input = QLineEdit()
         self.principal.addWidget(self.input, 0, 1, 1, 1)
         self.button1 = QPushButton("Submit")
         self.principal.addWidget(self.button1, 0, 2, 1, 1)
         self.button1.clicked.connect(self.texto)
-        self.setLayout(self.principal)
+        self.setLayout(self.principal)  
     
     def texto(self):
         res = "texto ingresado: " + self.input.displayText()
         print(res)
 
-class MyWindow(QMainWindow):
+class MyApp(QMainWindow):
     def __init__(self):
-        super(MyWindow, self).__init__()
-        self.setGeometry(200, 200, 300, 300)
+        super(MyApp, self).__init__()
+        self.setGeometry(200, 200, 500, 500)
         self.setWindowTitle("Mi app de practica")
         self.initUI()
         self.initMenuBar()
         self.show()
         
     def initUI(self):
-        self.ventana_principal = MainWindow()
-        self.setCentralWidget(self.ventana_principal)
+        self.principal = QTabWidget()
+        self.indice_alfabetos = self.principal.addTab(AlfabetoWidget(), "Alfabetos")
+        self.indice_lenguajes = self.principal.addTab(LenguajeWidget(), "Lenguajes")
+        self.setCentralWidget(self.principal)
     
     def initMenuBar(self):
         self.menu_bar = self.menuBar()
@@ -57,7 +86,7 @@ class MyWindow(QMainWindow):
         
 def ventana():
     app = QApplication(sys.argv)
-    ventana = MyWindow()
+    ventana = MyApp()
     sys.exit(app.exec())
 
 ventana()
