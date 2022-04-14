@@ -1,3 +1,4 @@
+import os
 """     Ejercicio 1: cuadrados
 def cuadrados(numero):
     dic_res = {}
@@ -37,7 +38,7 @@ else:
     print("Fruta no encontrada")
 """
 
-"""     Ejercicio 4: notas alumnos"""
+"""     Ejercicio 4: notas alumnos
 def ingresar_alumnos(cant_alumnos):
     dic_res = {}
     cont = 0
@@ -70,6 +71,87 @@ def diccionario_nota_media(diccionario):
 
 cant_alumnos = int(input("Ingrese la cantidad de alumnos: "))
 diccionario = ingresar_alumnos(cant_alumnos)
-print(diccionario)
+print("Diccionario notas\n", diccionario)
 diccionario_media = diccionario_nota_media(diccionario)
-print(diccionario_media)
+print("Diccionario notas promedio\n", diccionario_media)
+"""
+
+"""     Ejercicio 5: agenda"""
+def ingresar(diccionario):
+    nombre = input("Ingrese el nombre: ")
+    if nombre in diccionario:
+        print(diccionario[nombre])
+        modificar = input("Desea modificar el telefono? (S/N): ")
+        if modificar in "Ss":
+            nuevo_telefono = int(input("Ingrese el nuevo telefono: "))
+            diccionario[nombre] = nuevo_telefono
+    else:
+        telefono = int(input("Ingrese el telefono: "))
+        diccionario[nombre] = telefono
+
+def buscar(diccionario, data):
+    encontrado = False
+    for key, value in diccionario.items():
+        if key.removeprefix(data) != key:
+            print(f"Nombre: {key} - telefono: {value}")
+            encontrado = True
+    if not encontrado:
+        print("No encontrado")
+
+def listar(diccionario):
+    for key, value in diccionario.items():
+        print(f"Nombre: {key} - telefono: {value}")
+
+def menu(diccionario):
+    activador = True
+    while activador:
+        os.system("cls")
+        print("""
+                MI AGENDA
+            1-Añadir/modificar
+            2-Buscar
+            3-Borrar
+            4-Listar
+            0-Salir
+        """)
+        opcion = int(input("Ingrese la opción: "))
+        match opcion:
+            case 1:
+                print("\tAñadir/modificar")
+                ingresar(diccionario)
+            case 2:
+                print("\tBuscar")
+                if diccionario:
+                    cadena = input("Ingrese una cadena(nombre/prefijo): ")
+                    buscar(diccionario, cadena)
+                else:
+                    print("Agenda vacía!")
+                pass
+            case 3:
+                print("\tBorrar")
+                if diccionario:
+                    nombre = input("Ingrese el nombre: ")
+                    if nombre in diccionario:
+                        modificar = input("Desea borrar el contacto? (S/N): ")
+                        if modificar in "Ss":
+                            del diccionario[nombre]
+                            print("Contacto borrado!")
+                    else:
+                        print("No encontrado")
+                else:
+                    print("Agenda vacía!")
+            case 4:
+                print("\tListar")
+                if diccionario:
+                    listar(diccionario)
+                else:
+                    print("Agenda vacía!")
+            case 0:
+                print("\tSalir")
+                activador = False
+            case _:
+                print("excepcion match case -> menu")
+        sleep = input("Presione una tecla para continuar")
+
+agenda = {}
+menu(agenda)
