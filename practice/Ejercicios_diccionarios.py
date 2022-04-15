@@ -168,14 +168,32 @@ else:
     print("No encontrada")
 """
 
-"""     Ejercicio 7: datos personales"""
+"""     Ejercicio 7: datos personales
 diccionario = {}
 diccionario["nombre"] = input("Ingrese su nombre: ")
 diccionario["edad"] = int(input("Ingrese su edad: "))
 diccionario["direccion"] = input("Ingrese su dirección: ")
 diccionario["telefono"] = int(input("Ingrese su telefono: "))
-nombre = diccionario[nombre]
-edad = diccionario[edad]
-direccion = diccionario[dirección]
-telefono = diccionario[teléfono]
-print(f"mensaje {nombre} tiene {edad} años, vive en {direccion} y su número de teléfono es {telefono}.")
+nombre = diccionario["nombre"]
+edad = diccionario["edad"]
+direccion = diccionario["direccion"]
+telefono = diccionario["telefono"]
+print(f"{nombre} tiene {edad} años, vive en {direccion} y su número de teléfono es {telefono}.")
+"""
+
+"""     Ejercicio 8: tienda frutas"""
+frutas = {"Pera":1.23, "Manzana":0.82, "Mandarina":1.00, "Guayaba":0.91}
+print("\tTIENDA FRUTAS")
+for x, y in frutas.items():
+    print(f"Fruta - {x} \t- precio: ${y}")
+
+busqueda = input("Ingrese la fruta: ")
+if busqueda in frutas:
+    cantidad = float(input("Ingrese la cantidad(kilos): "))
+    res = frutas[busqueda] * cantidad
+    if cantidad > 1:
+        print(f"{cantidad} kilos de {busqueda}s dan como total: ${res} ")
+    else:
+        print(f"{cantidad} kilo de {busqueda} da como total: ${res} ")
+else:
+    print("No encontrada!")
