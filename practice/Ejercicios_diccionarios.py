@@ -76,7 +76,7 @@ diccionario_media = diccionario_nota_media(diccionario)
 print("Diccionario notas promedio\n", diccionario_media)
 """
 
-"""     Ejercicio 5: agenda"""
+'''     Ejercicio 5: agenda
 def ingresar(diccionario):
     nombre = input("Ingrese el nombre: ")
     if nombre in diccionario:
@@ -155,3 +155,27 @@ def menu(diccionario):
 
 agenda = {}
 menu(agenda)
+'''
+
+"""     Ejercicio 6: divisas
+divisas = {"Libra esterlina":"£", "Yen japones":"¥", "Yuan chino":"¥", "Euro":"€",
+    "Dolar":"$", "Corona noruega":"Kr", "Franco suizo":"Fr", "Won surcoreano":"₩"}
+
+consulta = input("Ingrese la divisa: ")
+if consulta in divisas:
+    print(f"Divisa: {consulta} - simbolo {divisas[consulta]}")
+else:
+    print("No encontrada")
+"""
+
+"""     Ejercicio 7: datos personales"""
+diccionario = {}
+diccionario["nombre"] = input("Ingrese su nombre: ")
+diccionario["edad"] = int(input("Ingrese su edad: "))
+diccionario["direccion"] = input("Ingrese su dirección: ")
+diccionario["telefono"] = int(input("Ingrese su telefono: "))
+nombre = diccionario[nombre]
+edad = diccionario[edad]
+direccion = diccionario[dirección]
+telefono = diccionario[teléfono]
+print(f"mensaje {nombre} tiene {edad} años, vive en {direccion} y su número de teléfono es {telefono}.")
