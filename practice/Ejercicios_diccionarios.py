@@ -181,7 +181,7 @@ telefono = diccionario["telefono"]
 print(f"{nombre} tiene {edad} años, vive en {direccion} y su número de teléfono es {telefono}.")
 """
 
-"""     Ejercicio 8: tienda frutas"""
+"""     Ejercicio 8: tienda frutas
 frutas = {"Pera":1.23, "Manzana":0.82, "Mandarina":1.00, "Guayaba":0.91}
 print("\tTIENDA FRUTAS")
 for x, y in frutas.items():
@@ -197,3 +197,19 @@ if busqueda in frutas:
         print(f"{cantidad} kilo de {busqueda} da como total: ${res} ")
 else:
     print("No encontrada!")
+"""
+
+"""     Ejercicio 9: fecha formato"""
+fecha = input("Ingrese una fecha(dd/mm/aaaa): ")
+day = fecha[:2]
+month = int(fecha[3:5])
+year = fecha[6:]
+diccionario_fecha = {
+    1:"January", 2:"Febuary", 3:"March", 4:"April", 5:"May",
+    6:"June", 7:"July", 8:"August", 9:"September", 10:"October",
+    11:"November", 12:"December"
+}
+if month in diccionario_fecha:
+    print(f"{day} of {diccionario_fecha[month]} of {year}")
+else:
+    print("Invalid month!")

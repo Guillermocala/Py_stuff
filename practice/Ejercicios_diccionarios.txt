@@ -51,7 +51,7 @@ y muestre por pantalla el precio de ese número de kilos de fruta. Si la fruta
 no está en el diccionario debe mostrar un mensaje informando de ello.
 
 9 - Escribir un programa que pregunte una fecha en formato dd/mm/aaaa y muestre 
-por pantalla la misma fecha en formato dd de <mes> de aaaa donde <mes> es el 
+por pantalla la misma fecha en formato dd de <mes> de aaaa; Donde <mes> es el 
 nombre del mes.
 
 10 - Escribir un programa que almacene el diccionario con los créditos de las 
