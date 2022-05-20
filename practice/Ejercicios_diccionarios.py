@@ -199,7 +199,7 @@ else:
     print("No encontrada!")
 """
 
-"""     Ejercicio 9: fecha formato"""
+"""     Ejercicio 9: fecha formato
 fecha = input("Ingrese una fecha(dd/mm/aaaa): ")
 day = fecha[:2]
 month = int(fecha[3:5])
@@ -213,3 +213,26 @@ if month in diccionario_fecha:
     print(f"{day} of {diccionario_fecha[month]} of {year}")
 else:
     print("Invalid month!")
+"""
+
+"""     Ejercicio 10: diccionario materias
+materias_curso = {"Matemáticas":4, "Física":4, "Ecología":2, "Ética":2}
+total_creditos = 0
+for item, value in materias_curso.items():
+    total_creditos += value
+    print(f"{item} tiene {value} créditos ")
+print(f"El número total de créditos en el curso es {total_creditos}")
+"""
+
+"""     Ejercicio 11: datos personales"""
+dictionary = {}
+activate = True
+print("\t\tDatos personales")
+while activate:
+    type_data = input("Ingrese el tipo de dato(digite -1 para salir): ")
+    if type_data == "-1":
+        break
+    else:
+        data = input("Ingrese el dato: ")
+        dictionary[type_data] = data
+    print(dictionary)
