@@ -224,7 +224,7 @@ for item, value in materias_curso.items():
 print(f"El número total de créditos en el curso es {total_creditos}")
 """
 
-"""     Ejercicio 11: datos personales"""
+"""     Ejercicio 11: datos personales
 dictionary = {}
 activate = True
 print("\t\tDatos personales")
@@ -236,3 +236,27 @@ while activate:
         data = input("Ingrese el dato: ")
         dictionary[type_data] = data
     print(dictionary)
+"""
+
+"""     Ejercicio 12: cesta de compra
+dictionary = {}
+activate = True
+precio_total = 0
+print("\t\tCesta de compra")
+while activate:
+    type_data = input("Ingrese el tipo articulo(digite -1 para salir): ")
+    if type_data == "-1":
+        break
+    else:
+        data = int(input("Ingrese el dato: "))
+        precio_total += data
+        dictionary[type_data] = data
+
+for key, value in dictionary.items():
+    print(f"Articulo: {key}, precio: {value}")
+print(f"El precio total es: {precio_total}")
+"""
+english_dictionary = {}
+activate = True
+print("\t\tDiccionario ingles-español")
+cadena = input("Ingrese las palabras en el formato: ")
