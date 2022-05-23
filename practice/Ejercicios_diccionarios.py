@@ -259,4 +259,18 @@ print(f"El precio total es: {precio_total}")
 english_dictionary = {}
 activate = True
 print("\t\tDiccionario ingles-español")
-cadena = input("Ingrese las palabras en el formato: ")
+print("Formato: palabra:traduccion, palabra2:traduccion2")
+palabras = input("Ingrese las palabras en el formato: ")
+lista_traduccion = palabras.split(",")
+print(lista_traduccion)
+for item in lista_traduccion:
+    lista_item = item.split(":")
+    english_dictionary[lista_item[0]] = lista_item[1]
+cadena = input("Ingrese una cadena para traducir: ")
+cadena_traducida = ""
+for item in cadena.split(" "):
+    if item in english_dictionary:
+        cadena_traducida += english_dictionary[item] + " "
+    else:
+        cadena_traducida += item + " "
+print(cadena_traducida)
