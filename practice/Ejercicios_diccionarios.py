@@ -256,6 +256,8 @@ for key, value in dictionary.items():
     print(f"Articulo: {key}, precio: {value}")
 print(f"El precio total es: {precio_total}")
 """
+
+"""     Ejercicio 13: traductor ingles-español
 english_dictionary = {}
 activate = True
 print("\t\tDiccionario ingles-español")
@@ -274,3 +276,43 @@ for item in cadena.split(" "):
     else:
         cadena_traducida += item + " "
 print(cadena_traducida)
+"""
+
+"""     Ejercicio 14: gestor facturas"""
+activador = True
+facturas = {}
+cantidad_cobrada = 0
+cantidad_pendiente_cobro = 0
+def status():
+    print(f"Cantidad cobrada hasta el momento es: {cantidad_cobrada}")
+    print(f"Cantidad pendiente de cobro es: {cantidad_pendiente_cobro}")
+
+while activador:
+    print("""
+    1-Añadir nueva factura
+    2-Pagar factura existente
+    3-Terminar programa""")
+    opcion = input("Ingrese la opcion: ")
+    match opcion:
+        case "1":
+            clave = input("Ingrese el numero de la factura: ")
+            if clave not in facturas:
+                costo = int(input("Ingrese el costo: "))
+                facturas[clave] = costo
+                cantidad_pendiente_cobro += costo
+                status()
+            else:
+                print("Ya existe")
+        case "2":
+            clave = input("Ingrese el numero de la factura: ")
+            if clave in facturas:
+                cantidad_cobrada += facturas[clave]
+                cantidad_pendiente_cobro -= facturas[clave]
+                del facturas[clave]
+                status()
+            else:
+                print("No encontrada")
+        case "3":
+            activador = False
+        case _:
+            print("Opcion invalida!")
