@@ -278,7 +278,7 @@ for item in cadena.split(" "):
 print(cadena_traducida)
 """
 
-"""     Ejercicio 14: gestor facturas"""
+'''     Ejercicio 14: gestor facturas
 activador = True
 facturas = {}
 cantidad_cobrada = 0
@@ -313,6 +313,64 @@ while activador:
             else:
                 print("No encontrada")
         case "3":
+            activador = False
+        case _:
+            print("Opcion invalida!")
+'''
+
+"""     Ejercicio 15: clientes de una empresa"""
+clientes_dict = {}
+nif = 1001
+activador = True
+while activador:
+    print("""
+    1-Añadir cliente
+    2-Eliminar cliente
+    3-Mostrar cliente
+    4-Listar todos los clientes
+    5-Listar clientes preferentes
+    6-Terminar programa""")
+    opcion = input("Ingrese la opcion: ")
+    match opcion:
+        case "1":
+            print("\tAñadir cliente")
+            nombre = input("Ingrese el nombre: ")
+            direccion = input("Ingrese la dirección: ")
+            telefono = input("Ingrese el telefono: ")
+            correo = input("Ingrese el correo: ")
+            preferente = input("Es preferente(Y/N): ")
+            while preferente not in "YN":
+                preferente = input("Es preferente(Y/N): ")
+            aux = {"nombre":nombre, "direccion":direccion, "telefono":telefono,
+                    "correo":correo, "preferente":preferente}
+            clientes_dict[nif] = aux
+            nif += 1
+        case "2":
+            print("\tEliminar cliente")
+            nif_eliminar = int(input("Ingrese el nif del cliente: "))
+            if nif_eliminar in clientes_dict:
+                del clientes_dict[nif_eliminar]
+                print("Eliminado")
+            else:
+                print("No encontrado")
+        case "3":
+            print("\tMostrar cliente")
+            nif_encontrar = int(input("Ingrese el nif del cliente: "))
+            if nif_encontrar in clientes_dict:
+                print("NIF: ", nif_encontrar, "\tDatos:\n", clientes_dict[nif_encontrar])
+            else:
+                print("No encontrado")
+        case "4":
+            print("\tListar todos los clientes")
+            for key, values in clientes_dict.items():
+                print("NIF: ", key, "\tDatos:\n", values)
+        case "5":
+            print("\tListar clientes preferentes")
+            for key, values in clientes_dict.items():
+                if values["preferente"] == "Y":
+                    print("NIF: ", key, "\tDatos:\n", values)
+        case "6":
+            print("\tTerminar programa")
             activador = False
         case _:
             print("Opcion invalida!")
