@@ -318,7 +318,7 @@ while activador:
             print("Opcion invalida!")
 '''
 
-"""     Ejercicio 15: clientes de una empresa"""
+'''     Ejercicio 15: clientes de una empresa
 clientes_dict = {}
 nif = 1001
 activador = True
@@ -374,3 +374,23 @@ while activador:
             activador = False
         case _:
             print("Opcion invalida!")
+'''
+
+"""     Ejercicio 16: directorio clientes segun cadena"""
+clientes_dict = {}
+cadena_clientes = input("Ingrese la cadena de clientes: ")
+"el patrón es el siguiente nif;nombre;email;teléfono;descuento"
+"ejemplo:   \n01234567L;Luis González;luisgonzalez@mail.com;656343576;12.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;8\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;5.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;15.7"
+lista_clientes = cadena_clientes.split(r"\n")
+print(lista_clientes)
+for item in lista_clientes:
+    if item:
+        cliente_data = item.split(";")
+        cliente_dict = {"nombre" : cliente_data[1], "email" : cliente_data[2], "telefono" : cliente_data[3], "descuento" : cliente_data[4]}
+        clientes_dict[cliente_data[0]] = cliente_dict
+print("El diccionario queda de la siguiente forma...")
+if clientes_dict:
+    for key, values in clientes_dict.items():
+        print("key: ", key, "\tvalue: ", values)
+else:
+    print("Diccionario vacio")
