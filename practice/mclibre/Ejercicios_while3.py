@@ -106,7 +106,7 @@ else:
     "unexpected case"
 """
 
-"""     Ejercicio 6: tres numeros al azar del 1 al 6"""
+"""     Ejercicio 6: tres numeros al azar del 1 al 6
 activador = True
 while activador:
     num1 = random.randint(1, 6)
@@ -114,5 +114,43 @@ while activador:
     num3 = random.randint(1, 6)
     print("Numero 1: ", num1, "\nNumero 2: ", num2, "\nNumero 3: ", num3)
     keep_playing = input("Si desea terminar el programa pulse intro...")
+    if not keep_playing:
+        activador = False
+"""
+
+"""     Ejercicio 7: anterior. Extra con 2 o 3 nums iguales
+activador = True
+while activador:
+    num1 = random.randint(1, 6)
+    num2 = random.randint(1, 6)
+    num3 = random.randint(1, 6)
+    print("Numero 1: ", num1, "\nNumero 2: ", num2, "\nNumero 3: ", num3)
+    if num1 == num2 and num1 == num3:
+        print("tres numeros iguales")
+    elif num1 == num2 or num1 == num3 or num2 == num3:
+        print("dos numeros iguales")
+    keep_playing = input("Si desea terminar el programa pulse intro...")
+    if not keep_playing:
+        activador = False
+"""
+
+"""     Ejercicio 8: maquina tragaperras v1"""
+print("\t\tMAQUINA TRAGAPERRAS V1")
+coins = 1
+activador = True
+while activador:
+    coins -= 1
+    num1 = random.randint(1, 6)
+    num2 = random.randint(1, 6)
+    num3 = random.randint(1, 6)
+    print("Numero 1: ", num1, "\nNumero 2: ", num2, "\nNumero 3: ", num3)
+    if num1 == num2 and num1 == num3:
+        coins += 5
+        print("tres numeros iguales, usted gana 5 monedas.")
+    elif num1 == num2 or num1 == num3 or num2 == num3:
+        coins += 2
+        print("dos numeros iguales, usted gana 2 monedas.")
+    print("Usted tiene: ", coins , " monedas.")
+    keep_playing = input("Si desea salir del juego pulse intro...")
     if not keep_playing:
         activador = False

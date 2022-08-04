@@ -15,47 +15,43 @@ obtenido más puntos sin superar 20 puntos.
 
 7 - Amplíe el programa anterior, haciendo que el programa indique si hay dos o tres números iguales.
 
-8 - Escriba un programa que muestre tres números al azar del 1 al 6.
+8 - Amplíe el programa anterior, haciendo que el programa entregue premios y lleve la cuenta del resultado.
+    - Inicialmente, el jugador empieza con una moneda.
+    - En cada tirada, al jugador se le cobra una moneda.
+    - En cada tirada, el programa muestra tres números al azar del 1 al 6.
+    - Si los tres números son distintos, el jugador no gana nada (es decir, pierde la moneda que apostó).
+    - Si salen dos números iguales, el jugador gana dos monedas (es decir, gana en total una moneda).
+    - Si salen tres números iguales, el jugador gana cinco monedas (es decir, gana en total cuatro monedas).
+    - El número de monedas puede hacerse negativo.
+    - Tras cada tirada, el jugador indica si quiere seguir jugando o no.
 
-9 - Amplíe el programa anterior, haciendo que el programa indique si hay dos o tres números iguales.
+9 - Amplíe el programa anterior, de manera que se parezca más al funcionamiento real de una máquina tragaperras.
+    - Inicialmente, el jugador indica con cuántas monedas empieza a jugar.
+    - En cada tirada, al jugador se le cobra una moneda.
+    - En cada tirada, el programa muestra tres números al azar del 1 al 6.
+    - Si los tres números son distintos, el jugador no gana nada (es decir, pierde la moneda que apostó).
+    - Si salen dos números iguales, el jugador gana dos monedas (es decir, gana en total una moneda).
+    - Si salen tres números iguales, el jugador gana cinco monedas (es decir, gana en total cuatro monedas).
+    - Si el jugador se queda sin monedas, la partida termina.
+    - Tras cada tirada, el jugador indica si quiere seguir jugando o no.
+    - Al terminar la partida, el programa indica cuántas monedas se han ganado o perdido.
 
-10 - Amplíe el programa anterior, haciendo que el programa entregue premios y lleve la cuenta del resultado.
-    Inicialmente, el jugador empieza con una moneda.
-    En cada tirada, al jugador se le cobra una moneda.
-    En cada tirada, el programa muestra tres números al azar del 1 al 6.
-    Si los tres números son distintos, el jugador no gana nada (es decir, pierde la moneda que apostó).
-    Si salen dos números iguales, el jugador gana dos monedas (es decir, gana en total una moneda).
-    Si salen tres números iguales, el jugador gana cinco monedas (es decir, gana en total cuatro monedas).
-    El número de monedas puede hacerse negativo.
-    Tras cada tirada, el jugador indica si quiere seguir jugando o no.
-
-11 - Amplíe el programa anterior, de manera que se parezca más al funcionamiento real de una máquina tragaperras.
-    Inicialmente, el jugador indica con cuántas monedas empieza a jugar.
-    En cada tirada, al jugador se le cobra una moneda.
-    En cada tirada, el programa muestra tres números al azar del 1 al 6.
-    Si los tres números son distintos, el jugador no gana nada (es decir, pierde la moneda que apostó).
-    Si salen dos números iguales, el jugador gana dos monedas (es decir, gana en total una moneda).
-    Si salen tres números iguales, el jugador gana cinco monedas (es decir, gana en total cuatro monedas).
-    Si el jugador se queda sin monedas, la partida termina.
-    Tras cada tirada, el jugador indica si quiere seguir jugando o no.
-    Al terminar la partida, el programa indica cuántas monedas se han ganado o perdido.
-
-12 - Escriba un programa que proponga sumas de números positivos (dos números entre 1 y 100) al usuario y 
+10 - Escriba un programa que proponga sumas de números positivos (dos números entre 1 y 100) al usuario y 
 compruebe la respuesta. El programa continuará hasta que se acierten cinco sumas.
 
-13 - Amplíe el programa anterior, haciendo que el programa pida cuántas operaciones se deben acertar para 
+11 - Amplíe el programa anterior, haciendo que el programa pida cuántas operaciones se deben acertar para 
 terminar el programa. Al terminar, el programa indicará cuántos intentos han sido necesarios.
 
-14 - Amplíe el programa anterior, haciendo que el programa indique cuántos segundos ha tardado en contestar 
+12 - Amplíe el programa anterior, haciendo que el programa indique cuántos segundos ha tardado en contestar 
 correctamente las operaciones.
 
-15 - Amplíe el programa anterior, haciendo que el programa permita repetir las operaciones e indique al final 
+13 - Amplíe el programa anterior, haciendo que el programa permita repetir las operaciones e indique al final 
 el tiempo mínimo que se ha conseguido.
 
-16 - Escriba un programa para jugar a adivinar un número (el ordenador "piensa" el número y el usuario tiene
+14 - Escriba un programa para jugar a adivinar un número (el ordenador "piensa" el número y el usuario tiene
 que adivinarlo). El programa empieza pidiendo entre qué números está el número a adivinar, se "inventa" 
 un número al azar y después el usuario va probando valores y el programa va diciendo si son demasiado grandes o pequeños.
 
-17 - Escriba un programa para jugar a adivinar un número (el usuario piensa un número y el programa tiene 
+15 - Escriba un programa para jugar a adivinar un número (el usuario piensa un número y el programa tiene 
 que adivinarlo). El programa empieza pidiendo entre qué números está el número a adivinar y después intenta adivinar
 de qué número se trata. El usuario va diciendo si el número que ha dicho el programa es menor, mayor o igual al buscado.
