@@ -134,7 +134,7 @@ while activador:
         activador = False
 """
 
-"""     Ejercicio 8: maquina tragaperras v1"""
+"""     Ejercicio 8: maquina tragaperras v1
 print("\t\tMAQUINA TRAGAPERRAS V1")
 coins = 1
 activador = True
@@ -154,3 +154,51 @@ while activador:
     keep_playing = input("Si desea salir del juego pulse intro...")
     if not keep_playing:
         activador = False
+"""
+
+"""     Ejercicio 8: maquina tragaperras v2(final)
+print("\t\tMAQUINA TRAGAPERRAS V2")
+coins = int(input("Ingrese la cantidad de monedas: "))
+while coins < 1:
+    print("No puede jugar con menos de 1 moneda!")
+    coins = int(input("Ingrese la cantidad de monedas: "))
+activador = True
+while activador:
+    coins -= 1
+    num1 = random.randint(1, 6)
+    num2 = random.randint(1, 6)
+    num3 = random.randint(1, 6)
+    print("Numero 1: ", num1, "\nNumero 2: ", num2, "\nNumero 3: ", num3)
+    if num1 == num2 and num1 == num3:
+        coins += 5
+        print("tres numeros iguales, usted gana 5 monedas.")
+    elif num1 == num2 or num1 == num3 or num2 == num3:
+        coins += 2
+        print("dos numeros iguales, usted gana 2 monedas.")
+    print("Usted tiene: ", coins , " monedas.")
+    if coins == 0:
+        break
+    else:
+        keep_playing = input("Si desea salir del juego pulse intro...")
+        if not keep_playing:
+            activador = False
+print("\tGAME OVER\nUsted termino con " ,coins, " monedas.")
+"""
+
+"""     Ejercicio 9: juego de sumas"""
+print("\t\tJUEGO DE SUMAS\nDebe adiviar 5 sumas para ganar...")
+intentos = 0
+aciertos = 0
+while aciertos < 5:
+    intentos += 1
+    num1 = random.randint(1, 100)
+    num2 = random.randint(1, 100)
+    suma = num1 + num2
+    print("intento ", intentos, "\n", num1, " + ", num2)
+    respuesta = int(input("respuesta: "))
+    if respuesta == suma:
+        aciertos += 1
+        print("Correcto!")
+    else:
+        print("Incorrecto!")
+print("\tGAME OVER... te ha llevado ", intentos, " intentos!")
