@@ -1,4 +1,5 @@
 import random
+import time
 """     Ejercicio 1: azar del 1 al 6
 activador = True
 while activador:
@@ -156,7 +157,7 @@ while activador:
         activador = False
 """
 
-"""     Ejercicio 8: maquina tragaperras v2(final)
+"""     Ejercicio 9: maquina tragaperras v2(final)
 print("\t\tMAQUINA TRAGAPERRAS V2")
 coins = int(input("Ingrese la cantidad de monedas: "))
 while coins < 1:
@@ -185,7 +186,7 @@ while activador:
 print("\tGAME OVER\nUsted termino con " ,coins, " monedas.")
 """
 
-"""     Ejercicio 9: juego de sumas"""
+"""     Ejercicio 10: juego de sumas
 print("\t\tJUEGO DE SUMAS\nDebe adiviar 5 sumas para ganar...")
 intentos = 0
 aciertos = 0
@@ -202,3 +203,52 @@ while aciertos < 5:
     else:
         print("Incorrecto!")
 print("\tGAME OVER... te ha llevado ", intentos, " intentos!")
+"""
+
+"""     Ejercicio 11: juego de sumas con limite definido por usuario y cantidad de intentos
+print("\t\tJUEGO DE SUMAS")
+limite = int(input("Ingrese la cantidad de sumas objetivo: "))
+while limite < 1:
+    print("No puede jugar con menos de 1 pregunta!")
+    limite = int(input("Ingrese la cantidad de sumas objetivo: "))
+intentos = 0
+aciertos = 0
+while aciertos < limite:
+    intentos += 1
+    num1 = random.randint(1, 100)
+    num2 = random.randint(1, 100)
+    suma = num1 + num2
+    print("intento ", intentos, "\n", num1, " + ", num2)
+    respuesta = int(input("respuesta: "))
+    if respuesta == suma:
+        aciertos += 1
+        print("Correcto!")
+    else:
+        print("Incorrecto!")
+print("\tGAME OVER... te ha llevado ", intentos, " intentos!")
+"""
+
+"""     Ejercicio 12: anterior añadiendo tiempo de juego"""
+print("\t\tJUEGO DE SUMAS")
+limite = int(input("Ingrese la cantidad de sumas objetivo: "))
+while limite < 1:
+    print("No puede jugar con menos de 1 pregunta!")
+    limite = int(input("Ingrese la cantidad de sumas objetivo: "))
+intentos = 0
+aciertos = 0
+inicio_juego = time.time()
+while aciertos < limite:
+    intentos += 1
+    num1 = random.randint(1, 100)
+    num2 = random.randint(1, 100)
+    suma = num1 + num2
+    print("intento ", intentos, "\n", num1, " + ", num2)
+    respuesta = int(input("respuesta: "))
+    if respuesta == suma:
+        aciertos += 1
+        print("Correcto!")
+    else:
+        print("Incorrecto!")
+fin_juego = time.time()
+tiempo_juego = int(fin_juego - inicio_juego)
+print("\tGAME OVER... te ha llevado ", intentos, " intentos en ", tiempo_juego, " segundos!")
