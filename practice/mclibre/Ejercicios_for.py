@@ -42,7 +42,7 @@ for x in range(0, numero):
 """
 
 
-"""     Ejercicio 5: identificador numeros negativos"""
+"""     Ejercicio 5: identificador numeros negativos
 cantidad_negativos = 0
 numero = int(input("Ingrese la cantidad de datos: "))
 for x in range(numero):
@@ -50,4 +50,31 @@ for x in range(numero):
     if numero_actual < 0:
         cantidad_negativos += 1
 print("La cantidad de negativos es: ", cantidad_negativos)
+"""
 
+"""     Ejercicio 6: contador pares e impares
+cantidad_pares = 0
+cantidad_impares = 0
+numero = int(input("Ingrese la cantidad de datos: "))
+for x in range(numero):
+    numero_actual = int(input("Ingrese un numero: "))
+    if numero_actual % 2 == 0:
+        cantidad_pares += 1
+    else:
+        cantidad_impares += 1
+print("La cantidad de pares es: ", cantidad_pares)
+print("La cantidad de impares es: ", cantidad_impares)
+"""
+
+
+"""     Ejercicio 6: numero primo """
+divisores = 1
+print("verificador numeros primos, debe ingresar un numero mayora a 1")
+numero = int(input("Ingrese el numero: "))
+for x in range(1, numero):
+    if numero % x == 0:
+        divisores += 1
+if divisores == 2:
+    print("Es primo")
+else:
+    print("No es primo")
