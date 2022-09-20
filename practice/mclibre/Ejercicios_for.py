@@ -67,7 +67,7 @@ print("La cantidad de impares es: ", cantidad_impares)
 """
 
 
-"""     Ejercicio 6: numero primo """
+"""     Ejercicio 7: numero primo 
 divisores = 1
 print("verificador numeros primos, debe ingresar un numero mayora a 1")
 numero = int(input("Ingrese el numero: "))
@@ -78,3 +78,12 @@ if divisores == 2:
     print("Es primo")
 else:
     print("No es primo")
+"""
+
+"""     Ejercicio 8: suma numeros"""
+suma = 0
+numero = int(input("Cantidad de numeros: "))
+for x in range(numero):
+    aux = float(input("ingrese un numero: "))
+    suma += aux
+print("La suma es: ", suma)
