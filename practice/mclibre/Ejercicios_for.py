@@ -80,10 +80,23 @@ else:
     print("No es primo")
 """
 
-"""     Ejercicio 8: suma numeros"""
+"""     Ejercicio 8: suma numeros
 suma = 0
 numero = int(input("Cantidad de numeros: "))
 for x in range(numero):
     aux = float(input("ingrese un numero: "))
     suma += aux
+print("La suma es: ", suma)
+"""
+
+"""     Ejercicio 9: suma en rango"""
+suma = 0
+print("Suma de numeros en rango, debe insertar el numero inicial y final...")
+numero_inicial = int(input("Ingrese el numero inicial: "))
+numero_final = int(input("Ingrese el numero final: "))
+while numero_final <= numero_inicial:
+    print("El numero final no puede ser menor o igual al inicial!")
+    numero_final = int(input("Ingrese el numero final: "))
+for x in range(numero_inicial, (numero_final + 1)):
+    suma += x
 print("La suma es: ", suma)
