@@ -89,7 +89,7 @@ for x in range(numero):
 print("La suma es: ", suma)
 """
 
-"""     Ejercicio 9: suma en rango"""
+"""     Ejercicio 9: suma en rango
 suma = 0
 print("Suma de numeros en rango, debe insertar el numero inicial y final...")
 numero_inicial = int(input("Ingrese el numero inicial: "))
@@ -100,3 +100,53 @@ while numero_final <= numero_inicial:
 for x in range(numero_inicial, (numero_final + 1)):
     suma += x
 print("La suma es: ", suma)
+"""
+
+"""     Ejercicio 10: suma en rango con sumandos en pantalla 
+suma = 0
+print("Suma de numeros en rango, debe insertar el numero inicial y final...")
+numero_inicial = int(input("Ingrese el numero inicial: "))
+numero_final = int(input("Ingrese el numero final: "))
+while numero_final <= numero_inicial:
+    print("El numero final no puede ser menor o igual al inicial!")
+    numero_final = int(input("Ingrese el numero final: "))
+for x in range(numero_inicial, (numero_final + 1)):
+    suma += x
+    if x != numero_final:
+        print(x, end=" + ")
+    else:
+        print(x, end=" = ")
+print(suma)
+"""
+
+'''     Ejercicio 11: mayor, menor y media de n numeros
+suma = 0
+mayor = 0;
+menor = 99999;
+print("Mayor, menor y media de numeros")
+cantidad = int(input("Ingrese la cantidad de numeros: "))
+for x in range(cantidad):
+    numero = int(input("Ingrese el numero: "))
+    if numero > mayor:
+        mayor = numero
+    if numero < menor:
+        menor = numero
+    suma += numero
+media = suma / cantidad
+print(f"""
+            Estadisticas
+        El numero mayor es: {mayor} 
+        El numero menro es: {menor} 
+        La media es: {media}
+        """)
+'''
+
+"""     Ejercicio 12: calcular factorial """
+factorial = 1
+numero = int(input("Ingrese el numero mayor a cero: "))
+while numero < 1:
+    print("el numero debe ser mayor a cero!")
+    numero = int(input("Ingrese el numero mayor a cero: "))
+for x in range(1, (numero + 1)):
+    factorial *= x
+print("El factorial es: ", factorial)
