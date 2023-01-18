@@ -4,6 +4,8 @@ from io import BytesIO
 import win32clipboard as wcb    # pip install pywin32
 from PIL import Image           # pip install pillow
 
+# para la libreria de qt          pip install pyside6
+
 from PySide6.QtCore import QSize
 from PySide6.QtGui import QPixmap
 
