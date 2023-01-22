@@ -9,8 +9,8 @@
 :type strs: List[str]
 :rtype: str
 """
-#strs = ["flower", "flow", "flight"]
-strs = ["aaa","aa","aaa"]
+strs = ["flower", "flow", "flight"]
+#trs = ["aaa","aa","aaa"]
 
 def longestCommonPrefix(strs):
     index = 1
@@ -27,7 +27,6 @@ def longestCommonPrefix(strs):
                     temp += x
                 else:
                     equal = False
-            print("temp: ", temp)
             prefix.append(temp)
             index += 1
     return min(prefix, key=len)
