@@ -6,7 +6,7 @@ def main():
     print("\t\tArea de campo en acres(Unidad de ingreso Pies)")
     ancho = float(input("Ingrese el ancho: "))
     largo = float(input("Ingrese el largo: "))
-    area_acres = (ancho * largo) / 43560
+    area_acres = (ancho / 43560) * (largo / 43560)
     print("El area en acres es: ", area_acres)
 
 if __name__ == "__main__":
